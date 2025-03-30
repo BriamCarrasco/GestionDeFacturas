@@ -11,3 +11,13 @@ public class GestiondefacturasApplication {
 	}
 
 }
+
+
+/*
+ * Desarrolla un microservicio que maneje la facturación de servicios veterinarios. 
+ * Debe registrar los servicios prestados, calcular los costos asociados y generar facturas. 
+ * Implementa validaciones para los datos ingresados y proporciona funcionalidades 
+ * para consultar y pagar facturas.
+ */
+
+ 
