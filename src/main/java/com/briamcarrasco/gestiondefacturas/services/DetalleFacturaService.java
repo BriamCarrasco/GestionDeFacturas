@@ -14,7 +14,6 @@ public class DetalleFacturaService {
     private final List<DetalleFactura> detallesFactura = new ArrayList<>();
 
     public DetalleFacturaService(ServiciosService serviciosService) {
-        // Intentamos obtener los servicios desde serviciosService
         agregarDetalleFactura(1, serviciosService.obtenerServicioPorId(1), 1);
         agregarDetalleFactura(2, serviciosService.obtenerServicioPorId(2), 2);
         agregarDetalleFactura(3, serviciosService.obtenerServicioPorId(3), 1);
@@ -23,15 +22,15 @@ public class DetalleFacturaService {
         agregarDetalleFactura(6, serviciosService.obtenerServicioPorId(6), 1);
         agregarDetalleFactura(7, serviciosService.obtenerServicioPorId(7), 3);
         agregarDetalleFactura(8, serviciosService.obtenerServicioPorId(8), 2);
-    }
+    }//inicializa la lista de detalles de factura con algunos datos de ejemplo
 
       private void agregarDetalleFactura(int id, Optional<Servicios> servicioOpt, int cantidad) {
         servicioOpt.ifPresent(servicio -> {
             detallesFactura.add(new DetalleFactura(id, servicio, cantidad, servicio.getPrecioServicio(), cantidad));
         });
-    }
+    }//agrega un detalle de factura a la lista de detalles de factura
 
     public List<DetalleFactura> obtenerDetallesFactura() {
         return detallesFactura;
-    }
+    }//devuelve la lista de detalles de factura
 }

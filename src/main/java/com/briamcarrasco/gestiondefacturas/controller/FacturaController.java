@@ -25,12 +25,12 @@ public class FacturaController {
     @GetMapping
     public List<Factura> obtenerFacturas() {
         return facturaService.obtenerFacturas();
-    }
+    }//obtiene la lista de facturas
 
     @GetMapping("/{id}")
     public Optional<Factura> obtenerFacturaPorId(@PathVariable int id) {
         return facturaService.obtenerFacturaPorId(id);
-    }
+    }//obtiene una factura por id
     
     
 }

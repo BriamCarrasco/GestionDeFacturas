@@ -7,7 +7,7 @@ public class Emisor {
     private String direccionEmisor;
 
 
-    // Constructor
+    // Constructor de Emisor
     public Emisor(int idEmisor, String nombreEmisor, String rutEmisor, String direccionEmisor) {
         this.idEmisor = idEmisor;
         this.nombreEmisor = nombreEmisor;

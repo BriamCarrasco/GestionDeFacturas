@@ -6,7 +6,7 @@ public class Servicios {
     private String descripcionServicio;
     private double precioServicio;
 
-    // Constructor
+    // Constructor de Servicios
     public Servicios(int idServicio, String nombreServicio, String descripcionServicio, double precioServicio) {
         this.idServicio = idServicio;
         this.nombreServicio = nombreServicio;

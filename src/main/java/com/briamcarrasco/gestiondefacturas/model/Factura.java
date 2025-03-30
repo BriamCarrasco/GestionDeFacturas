@@ -12,7 +12,7 @@ public class Factura {
     private double total; 
     
 
-    // Constructor
+    // Constructor de Factura
     public Factura(int idFactura, int numeroFactura, String fechaEmision, Emisor emisor, List<DetalleFactura> detalles, Cliente cliente, double total) {
         this.idFactura = idFactura;
         this.numeroFactura = numeroFactura;

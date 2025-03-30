@@ -26,10 +26,10 @@ public class ClienteController {
     @GetMapping
     public List<Cliente> listarClientes() {
         return clienteService.obtenerClientes();
-    }
+    }//obtiene la lista de clientes
 
     @GetMapping("/{id}")
     public Optional<Cliente> obtenerClientePorId(@PathVariable int id) {
         return clienteService.obtenerClientePorId(id);
-    }
+    }//obtiene un cliente por id
 }

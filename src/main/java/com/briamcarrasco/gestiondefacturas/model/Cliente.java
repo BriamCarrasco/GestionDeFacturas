@@ -8,7 +8,7 @@ public class Cliente {
     private String direccionCliente;
     private String telefonoCliente;
 
-    // Constructor
+    // Constructor de cliente
     public Cliente(int idCliente, String nombreCliente, String rutCliente, String direccionCliente, String telefonoCliente) {
         this.idCliente = idCliente;
         this.nombreCliente = nombreCliente;

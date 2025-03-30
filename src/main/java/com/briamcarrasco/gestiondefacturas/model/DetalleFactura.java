@@ -9,7 +9,7 @@ public class DetalleFactura {
     private double precioUnitario;
     private double subtotal;
 
-    // Constructor
+    // Constructor de DetalleFactura
     public DetalleFactura(int idDetalleFactura, Servicios servicio, int cantidad, double precioUnitario, double subtotal) {
         this.idDetalleFactura = idDetalleFactura;
         this.servicio = servicio;

@@ -23,26 +23,25 @@ public class FacturaService {
 
         Random random = new Random();
 
-        // Crear 8 facturas asignando clientes y detalles de forma aleatoria
+        //crea facturas con datos de ejemplo de forma aleatoria con datos de clientes, emisor y detalles de factura.
         for (int i = 1; i <= 8; i++) {
-            int numeroFactura = 1000 + i; // Simulación de número de factura
-            String fechaEmision = "2025-03-30"; // Puedes cambiarlo a una fecha dinámica
-            Cliente cliente = clientes.get(random.nextInt(clientes.size()));
+            int numeroFactura = 1000 + i;
+            String fechaEmision = "2025-03-30"; //se propone una fecha de emision fija para el ejemplo.
+            Cliente cliente = clientes.get(random.nextInt(clientes.size())); //se elige un cliente aleatorio de la lista de clientes.
 
-            // Dividir los detalles en subconjuntos para cada factura
-            List<DetalleFactura> detallesFactura = detalles.subList(0, random.nextInt(detalles.size()) + 1);
+            List<DetalleFactura> detallesFactura = detalles.subList(0, random.nextInt(detalles.size()) + 1); 
 
-            facturas.add(new Factura(i, numeroFactura, fechaEmision, emisor, detallesFactura, cliente, 32332));
+            facturas.add(new Factura(i, numeroFactura, fechaEmision, emisor, detallesFactura, cliente, 32332));//se crea una nueva factura con los datos de ejemplo.
         }
     }
 
     public List<Factura> obtenerFacturas() {
         return facturas;
-    }
+    }//devuelve la lista de facturas
 
     public Optional<Factura> obtenerFacturaPorId(int id) {
         return facturas.stream()
                        .filter(facturas -> facturas.getIdFactura() == id)
                        .findFirst();
-    }
+    }//devuelve una factura por su id.
 }
